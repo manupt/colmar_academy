@@ -1,0 +1,47 @@
+html, body {
+  font-size: 16px;
+  height: 100%
+}
+
+/*Header*/
+header {
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  margin-left: 1.5rem;
+  max-height: 2rem;
+}
+
+.logo span {
+  line-height: 2rem;
+}
+
+header nav {
+  margin-right: 1.5rem;
+}
+
+.header_links a{
+  margin-left: 1rem;
+}
+
+/*FIRST CONTENT*/
+.first_content {
+  background-color: gray;
+  max-height: content;
+}
+
+.banner {
+  max-width: 60%;
+  background-image: url("../images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 2rem 1.5rem;
+}
