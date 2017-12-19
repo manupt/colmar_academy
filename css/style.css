@@ -96,6 +96,7 @@ header nav {
   display: flex;
   max-height: content;
   align-items: center;
+  padding-bottom: 2rem;
 }
 
 .left {
@@ -144,3 +145,46 @@ header nav {
 }
 
 /*THIRD CONTENT*/
+.third_content h1 {
+  text-align: center;
+}
+
+.third_content {
+  background-color: lightgray;
+  padding: 2rem 4.5rem;
+}
+
+.blocks {
+  min-width: 32%;
+  max-width: 32%;
+}
+
+.blocks img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+
+
+
+/*FOURTH CONTENT*/
+.fourth_content {
+  display: flex;
+  padding: 2rem;
+}
+
+.fourth_content h1 {
+  text-align: center;
+}
+
+.fourth_content .left {
+  margin: 0rem 1.5rem;
+}
