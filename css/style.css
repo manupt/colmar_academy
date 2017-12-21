@@ -13,6 +13,7 @@ html {
 body {
   width: 90%;
 }
+
 h1 {
   font-size: 2rem;
   font-weight: bold;
@@ -22,6 +23,7 @@ h1 {
 h2 {
   font-size: 1.4rem;
   font-weight: bold;
+  line-height: 1.5rem;
 }
 /*Header*/
 header {
@@ -177,14 +179,60 @@ header nav {
 
 /*FOURTH CONTENT*/
 .fourth_content {
-  display: flex;
-  padding: 2rem;
+  padding: 0rem 0rem 2rem 1.5rem;
 }
 
 .fourth_content h1 {
   text-align: center;
+  margin: 4.5rem 0rem;
 }
 
+.columns {
+  display: flex;
+}
 .fourth_content .left {
-  margin: 0rem 1.5rem;
+  margin: 0rem 1.5rem 2rem;
+  width: 60%;
+}
+
+.fourth_content .left h2 {
+  margin: 1.5rem 0rem 0.5rem;
+}
+
+.fourth_content .right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.fisma, .nowthen {
+  display: flex;
+  max-height: content;
+  align-items: center;
+  padding: 1rem;
+}
+
+.fisma {
+  background-color: lightgray;
+}
+
+.fisma img, .nowthen img {
+  width: 30%;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.right .text {
+  display: flex;
+  flex-direction: column;
+}
+/*FOOTER*/
+footer {
+  padding: 1rem 1rem 2.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer span:last-child {
+  word-spacing: 1rem;
 }
