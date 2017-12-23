@@ -24,6 +24,7 @@ h1 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
+  line-height: 2rem;
 }
 
 h2 {
@@ -269,7 +270,7 @@ header nav {
   text-align: center;
 }
 
-.third_content {
+.third_content.desktop {
   background-color: lightgray;
   padding: 2rem 4.5rem;
 }
@@ -285,50 +286,46 @@ header nav {
   margin-bottom: 1rem;
 }
 
-.courses {
+.courses.desktop {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.third_content .mobile {
+.third_content.mobile {
   display: none;
 }
 
 @media only screen and (max-width:600px) {
-  .third_content .desktop {
+  .third_content.desktop {
     display: none;
   }
 
-  .third_content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .third_content.mobile {
+    display: block;
     padding: 2rem 0.5rem;
   }
 
-  .third_content h2 {
+  .courses.mobile {
+    display: block;
+  }
+
+  .courses.mobile h2 {
     background-color: lightgray;
-    width: 100%;
     margin-bottom: 0.5rem;
-    padding: 1rem 0rem 0.5rem 1rem;
+    padding: 1rem 0rem 1.5rem 1rem;
+
   }
 
-  .third_content {
-    background-color: white;
-    padding: 2rem 4.5rem;
-  }
 
-  .third_content .mobile {
-    display: flex;
-    flex-direction: column;
-  }
+
+
 }
 
 
 /*FOURTH CONTENT*/
 .fourth_content {
-  padding: 2rem 0rem 2rem 1.5rem;
+  padding: 2rem 0.2rem 1.5rem 0.2rem;
 }
 
 .fourth_content h1 {
@@ -392,14 +389,24 @@ header nav {
 
 
 }
-}
+
 /*FOOTER*/
 footer {
   padding: 1rem 1rem 2.5rem 1.5rem;
   display: flex;
   justify-content: space-between;
+  border-top: 0.5px solid lightgray;
 }
 
 footer span:last-child {
   word-spacing: 1rem;
+}
+
+@media only screen and (max-width:600px) {
+  footer {
+    padding: 1rem 0rem 1rem 0.5rem;
+    display: block;
+    text-align: left;
+    border: 0px;
+  }
 }
