@@ -1,7 +1,6 @@
 html, body {
   font-size: 16px;
   height: 100%;
-  font-family: Helvetica;
   line-height: 1.2rem;
 }
 
@@ -14,32 +13,39 @@ body {
   width: 100%;
 }
 
-@media only screen and (max-width:600px) {
-  body {
-    width: 100%;
-  }
-}
-
 h1 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
-  line-height: 2rem;
+  line-height: 2.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
 }
 
 h2 {
   font-size: 1.4rem;
   font-weight: bold;
   line-height: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+q {
+  font-style: italic;
 }
 
 .mobile {
   display: none;
 }
 
-.second_content .mobile {
-  display: none;
-}
 /*Header*/
 header {
   height: 4rem;
@@ -54,11 +60,12 @@ header {
 
 .logo img {
   margin-left: 1.5rem;
-  max-height: 2rem;
+  height: 2rem;
 }
 
 .logo span {
   line-height: 2rem;
+  font-size: 1.5rem;
 }
 
 header nav {
@@ -67,6 +74,10 @@ header nav {
 
 .header_links a{
   margin-left: 1rem;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 @media only screen and (max-width: 600px) {
@@ -80,6 +91,7 @@ header nav {
     justify-content: space-around;
   }
 }
+
 /*FIRST CONTENT*/
 .first_content {
   background-color: lightgray;
@@ -106,7 +118,7 @@ header nav {
 }
 
 .banner_text .button {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   background-color: gray;
   text-align: center;
   width: 80%;
@@ -117,6 +129,11 @@ header nav {
   text-decoration: none;
   color: white;
   font-weight: normal;
+}
+
+.banner_text p {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
 }
 
 @media only screen and (max-width:600px) {
@@ -144,7 +161,7 @@ header nav {
     width: 100%;
     font-weight: bold;
     word-wrap:break-word;
-    margin: 2rem 0rem 2rem 1rem;
+    margin: 2rem 1rem 2rem 1rem;
   }
 
   .banner_text .button {
@@ -166,13 +183,13 @@ header nav {
 .second_content {
   display: flex;
   max-height: content;
-  align-items: center;
-  padding-bottom: 2rem;
+  align-items:flex-start;
+  padding: 2rem 0rem;
 }
 
 .left {
   width: 60%;
-  margin: 2rem 1.5rem;
+  margin: 0rem 1.5rem;
   display: flex;
   flex-direction: column;
 }
@@ -183,39 +200,61 @@ header nav {
   margin-bottom: 1.5rem;
 }
 
+.left .name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: 2rem;
+}
 .right {
   width: 40%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  justify-content: flex-start;
+  border-left: 0.8px solid lightgray;
 }
 
-.orientation {
-  margin-top: 2rem;
+/* .orientation {
   max-height: content;
-}
+} */
 
 .orientation, .campus, .guest_lecture {
   display: flex;
   align-items: center;
 }
 
-.orientation p, .campus p, .guest_lecture p{
-  margin: 0.5rem 0rem;
+.second_content .text h2 {
+  margin-bottom: 0.7rem;
+}
+.second_content .text p {
+  margin: 0.7rem 0rem;
+}
+
+.second_content .text span {
+  margin-bottom: 1rem;
 }
 
 .right img{
   display: inline-block;
   max-width: 35%;
   height: auto;
-  margin: 1rem;
+  margin: 0rem 1rem 1rem 1rem;
 }
 
 .guest_lecture {
   background-color: lightgray;
+  padding-top: 1rem;
+}
+
+.second_content .mobile {
+  display: none;
 }
 
 @media only screen and (max-width:600px) {
+
+  .second_content {
+    padding: 1rem 0rem 2rem;
+  }
+
   .second_content .desktop {
     display: none
   }
@@ -230,7 +269,15 @@ header nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem 1rem 2rem;
+    padding: 0px 1rem;
+    border: 0px;
+  }
+
+  .right img{
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0rem;
   }
 
   .orientation {
@@ -241,22 +288,35 @@ header nav {
   .orientation, .campus, .guest_lecture {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .right .text {
     margin-left: 1rem;
   }
 
+  .second_content .text h2 {
+    margin-bottom: 0rem;
+    margin-top: 1.2rem;
+  }
+
   .orientation p, .campus p, .guest_lecture p{
     margin: 0.5rem 0rem;
+  }
+
+  .second_content .text span {
+    margin-bottom: 1.5rem;
+  }
+
+  .second_content .guest_lecture .text span{
+    margin-bottom:0px;
   }
 
   .second_content .mobile{
     display: block;
     max-width: 100%;
     height: auto;
-    margin: 1rem;
+    margin: 0rem;
   }
 
   .guest_lecture {
@@ -275,15 +335,32 @@ header nav {
   padding: 2rem 4.5rem;
 }
 
+.third_content.desktop h2 {
+  margin-bottom: 1rem;
+}
+
+.third_content.desktop p {
+  margin-bottom: 0.5rem;
+  line-height: 2rem;
+}
+
 .blocks {
   min-width: 32%;
   max-width: 32%;
+  background-color: white;
+  margin-top: 1rem;
 }
 
 .blocks img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 1rem;
+  margin: 0rem 0rem 1rem;
+}
+
+.blocks .blocks_text {
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+  width: 80%;
 }
 
 .courses.desktop {
@@ -406,7 +483,7 @@ footer span:last-child {
   footer {
     padding: 1rem 0rem 1rem 0.5rem;
     display: block;
-    text-align: left;
+    text-align: center;
     border: 0px;
   }
 }
