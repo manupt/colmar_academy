@@ -18,7 +18,7 @@ h1 {
   font-weight: bold;
   margin-bottom: 1.5rem;
   line-height: 2.5rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif;
   font-weight: 600;
 }
 
@@ -31,7 +31,7 @@ h2 {
 
 p {
   font-family: 'Raleway', sans-serif;
-  color: rgb(118, 117, 143);
+  color: rgb(70, 69, 84);
 }
 
 a {
@@ -43,12 +43,24 @@ q {
   font-style: italic;
 }
 
+span {
+  color: rgb(70, 69, 84);
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+nav a {
+  transition: font-weight 0.2s linear;
+}
+
 .mobile {
   display: none;
 }
 
 /*Header*/
-header {
+header.desktop {
   height: 4rem;
   display: flex;
   justify-content: space-between;
@@ -69,7 +81,7 @@ header {
   font-size: 1.5rem;
 }
 
-header nav {
+.desktop nav {
   margin-right: 1.5rem;
 }
 
@@ -79,17 +91,33 @@ header nav {
 
 .bold {
   font-weight: 700;
+  color: rgb(34, 33, 41);
 }
 
-@media only screen and (max-width: 850px) {
-  .desktop {
+@media only screen and (max-width: 600px) {
+  header.desktop {
     display: none;
   }
 
-  .mobile {
-    display: block;
+  header.mobile {
+      height: 4rem;
+      display: flex;
+      justify-content: center;
+    }
+
+  .mobile nav {
+    width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+  }
+
+  .mobile img:hover {
+    box-shadow: 2px 2px 3px;
+  }
+
+  .mobile img {
+    transition: box-shadow 0.3s ease-in-out;
   }
 }
 
@@ -124,7 +152,15 @@ header nav {
   text-align: center;
   width: 80%;
   padding: 0.5rem 0rem;
+  transition: all 0.2s ease-in;
 }
+
+.banner_text .button:hover {
+  box-shadow: inset 5px 5px 5px;
+  font-size: 1.5rem;
+}
+
+
 
 .button a {
   text-decoration: none;
@@ -137,7 +173,7 @@ header nav {
   line-height: 1.7rem;
 }
 
-@media only screen and (max-width:850px) {
+@media only screen and (max-width:600px) {
   .first_content {
     background-color: lightgray;
     max-height: content;
@@ -159,19 +195,20 @@ header nav {
   .banner_text {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     font-weight: bold;
     word-wrap:break-word;
     margin: 2rem 1rem 2rem 1rem;
   }
 
   .banner_text .button {
-    margin-top: 1.5rem;
+    width: 90%;
+    /* margin-top: 1.5rem; */
     background-color: gray;
     text-align: center;
     display: block;
-    padding: 0.5rem 1.5rem;
-    margin-right: 1rem;
+    padding: 0.5rem 5%;
+    margin: 1.5rem 2rem 0rem 0rem;
   }
 
   .button a {
@@ -250,7 +287,7 @@ header nav {
   display: none;
 }
 
-@media only screen and (max-width:850px) {
+@media only screen and (max-width:600px) {
 
   .second_content {
     padding: 1rem 0rem 2rem;
@@ -374,7 +411,7 @@ header nav {
   display: none;
 }
 
-@media only screen and (max-width:850px) {
+@media only screen and (max-width:600px) {
   .third_content.desktop {
     display: none;
   }
@@ -451,7 +488,7 @@ header nav {
   flex-direction: column;
 }
 
-@media only screen and (max-width:850px) {
+@media only screen and (max-width:600px) {
   .fourth_content .desktop {
     display: none;
   }
@@ -480,16 +517,11 @@ footer span:last-child {
   word-spacing: 1rem;
 }
 
-@media only screen and (max-width:850px) {
+@media only screen and (max-width:600px) {
   footer {
     padding: 1rem 0rem 1rem 0.5rem;
     display: block;
     text-align: center;
     border: 0px;
   }
-}
-
-/*TEXT COLORS*/
-span .bold {
-  color: hsl(252, 70%, 40%);
 }
