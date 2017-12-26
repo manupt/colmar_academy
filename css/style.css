@@ -63,10 +63,8 @@ span a {
   transition: font-weight 0.2s linear;
 }
 
-@media only screen and (min-width: 600px) {
 .mobile {
   display: none;
-}
 }
 
 
