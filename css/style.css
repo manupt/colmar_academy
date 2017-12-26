@@ -55,9 +55,20 @@ nav a {
   transition: font-weight 0.2s linear;
 }
 
+span a:hover {
+  font-weight: bold;
+}
+
+span a {
+  transition: font-weight 0.2s linear;
+}
+
+@media only screen and (min-width: 600px) {
 .mobile {
   display: none;
 }
+}
+
 
 /*Header*/
 header.desktop {
